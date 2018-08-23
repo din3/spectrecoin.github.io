@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+        <link rel="manifest" href="favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="font.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="css/guide.css">
+        <title>SpectreCoin</title>
+    </head>
+    <body>   
+        <nav id="page-nav" class="navbar navbar-expand-sm fixed-top">
+            <img src="images/spectre.png" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="nav">
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#">HOME</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#guides">GUIDES</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#trade">TRADE</a>
+                    </li>
+                    <li class="nav-item wrap d-none d-md-block">
+                        <a class="nav-link logo" href="/"><img src="images/spectre.png" class="logo"></a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#donations">DONATIONS</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#team">TEAM</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#community">COMMUNITY</a>
+                    </li>
+                </ul>
+            </div>        
+        </nav>
+        <div id="page-wrap">
+            <div class="content-buffer"></div>
+            <div class="container" id="mech">
+                <div class="row">
+                    <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <div class="card">
+                            <h3>How does staking mechanism work in the system</h3>
+                            <p>Proof of stake (PoS) is a type of algorithm by which a cryptocurrency blockchain network aims to achieve distributed consensus. In PoS-based cryptocurrencies, the creator of the next block is chosen via various combinations of random selection and wealth or age (i.e., the stake).<br/>In contrast, the algorithm of proof-of-work-based cryptocurrencies such as bitcoin uses mining; that is, the solving of computationally intensive puzzles to validate transactions and create new blocks.</p>
+                            <p><b>SpectreCoin operates on a Proof-of-Stake version 3 protocol (PoSv3)</b>, and the differences are described below.</p>
+                            <p><b>Proof of Stake has a fairly long history</b>. Not to cover every detail, but cover broadly what was changed between each version to arrive at PoSv3 for historical purposes:</p>
+                            <p>PoSv1 - This version is implemented in Peercoin. It relied heavily on the notion of "coin age", or how long a UTXO has not been spent on the blockchain. It's implementation would basically make it so that the higher the coin age, the more the difficulty is reduced. This had the bad side-effect however of encouraging people to only open their wallet every month or longer for staking. Assuming the coins were all relatively old, they would almost instantaneously produce new staking blocks. This however makes double-spend attacks extremely easy to execute. Peercoin itself is not affected by this because it is a hybrid PoW and PoS blockchain, so the PoW blocks mitigated this effect.</p>
+                            <p>PoSv2 - This version removes coin age completely from consensus, as well as using a completely different stake modifier mechanism from v1. The number of changes are too numerous to list here. All of this was done to remove coin age from consensus and make it a safe consensus mechanism without requiring a PoW/PoS hybrid blockchain to mitigate various attacks.</p>
+                            <p><b>PoSv3</b> - PoSv3 is really more of an incremental improvement over PoSv2. In PoSv2 the stake modifier also included the previous block time. This was removed to prevent a "short-range" attack where it was possible to iteratively mine an alternative blockchain by iterating through previous block times. PoSv2 used block and transaction times to determine the age of a UTXO; this is not the same as coin age, but rather is the "minimum confirmations required" before a UTXO can be used for staking. This was changed to a much simpler mechanism where the age of a UTXO is determined by it's depth in the blockchain. This thus doesn't incentivize inaccurate timestamps to be used on the blockchain, and is also more immune to "timewarp" attacks. PoSv3 also added support for OP_RETURN coinstake transactions which allows for a vout to contain the public key for signing the block without requiring a full pay-to-pubkey script.</p>
+                            <img class="img-fluid" src="images/stakingmech.png">  
+                            <p>Basically, ‘staking’ algorithm awards nodes (wallets with synchronized blockchain that are online for keeping the peer-to-peer network operational.</p>
+                            <p>A node/online wallet (and user in the end) receives <b>5%</b> annually on the amounts of coins it has in the wallet being online at all times (or 24/7).</p>
+                            <p><b>5%</b> is the rate you receive if all the Coin Supply of the network(around ~21 mil currently) are being on the synchronized wallets and online (or ‘staking’).</p>
+                            <p>Bonuses are being distributed every time a new block of transactions being accepted to the block chain (or every 60 seconds).<br/>Reward for generating accepted block is around <b>~2</b> XSPEC.<br/>Sometimes you generate a block, but someone was faster and got their block accepted first, then your block would be called ‘orphaned’ and you won’t receive reward for that block</p>
+                            <p>As in practice the amount of wallets ‘staking’ online is much lesser in the moment (e.g 7 mil instead of 21 mil Coin Supply), 5% rewards of the whole Coin Supply (around 1 mil of XSPEC) would be distributed between fewer amount of people.<br/>And as in our example given, XSPEC owners that hold 30% of coins being staked will receive benefits as if 100% of coin supply would have been ‘staked’, effectively increasing their bonus rewards rate from staking from <b>5%</b> to <b>15%</b></p>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/content-scaling.js"></script>
+    </body>
+</html>

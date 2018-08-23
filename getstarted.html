@@ -1,0 +1,116 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="favicons/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+        <link rel="manifest" href="favicons/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="favicons/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+        <link rel="stylesheet" href="font.css">
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet" href="css/guide.css">
+        <title>SpectreCoin</title>
+    </head>
+    <body>   
+        <nav id="page-nav" class="navbar navbar-expand-sm fixed-top">
+            <img src="images/spectre.png" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+                <ul class="nav">
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#">HOME</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#about">ABOUT</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#guides">GUIDES</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#trade">TRADE</a>
+                    </li>
+                    <li class="nav-item wrap d-none d-md-block">
+                        <a class="nav-link logo" href="/"><img src="images/spectre.png" class="logo"></a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#donations">DONATIONS</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#team">TEAM</a>
+                    </li>
+                    <li class="nav-item wrap">
+                        <a class="nav-link" href="index.html#community">COMMUNITY</a>
+                    </li>
+                </ul>
+            </div>        
+        </nav>
+        <div id="page-wrap">
+            <div class="content-buffer"></div>
+            <div class="container" id="buycoins">
+                <div class="row">
+                    <div class="col-sm-12 col-md-10 offset-md-1 col-lg-8 offset-lg-2">
+                        <div class="card">
+                            <h3>Getting started with the desktop wallet</h3>
+                            <h4>Step 1: Download and Install the Wallet Client</h4>
+                            <p>First, download the <a href="download.html">SpectreCoin Desktop Wallet client</a>. The client has install packages for Windows (32 \& 64) and Mac. You can also find a Linux build with instructions on their <a href="https://github.com/spectrecoin/spectre">GitHub</a>.</p>
+                            <h4>Step 2: Sync your Client to the SpectreCoin Network</h4>
+                            <p>Next, you’ll want to ensure that your client is fully synced to the SpectreCoin network. The sync process should begin automatically, however in some cases you will need to manually connect your wallet to the network. This is a known bug that will be fixed in the next release.</p>
+                            <p>The icons in the upper-right hand corner of the wallet client will indicate the status of your wallet. Compare the icons below to your wallet’s icons in the upper-right corner to determine if your wallet is syncing properly. You can also hover over the icons in your client to reveal more status information.</p>
+                            <img src="images/walleticons.jpeg">
+                            <p>If your wallet is syncing properly, you can proceed to Step 3. Otherwise, follow the steps below to manually update your wallet to begin the sync process.</p>
+                            <h5>If you have “0 Connections” to the SpectreCoin Network</h5>
+                            <p>If you are showing zero connections you will need to manually add a few node addresses to your wallet.</p>
+                            <p>First, <a href="https://chainz.cryptoid.info/xspec/#!network">visit this</a> website and click on the <b>node list</b> button for v1.3.3.</p>
+                            <img src="images/blockchainexplorer.jpeg">
+                            <p>You will want to copy 5–6 of these node addresses and add them to your SpectreCoin wallet. Before we add them to the wallet, we need to make a slight modification to each line of code.</p>
+                            <p><b>addnode=2uyfzdmv4aqyzzoz.onion</b></p>
+                            <p>should become</p>
+                            <p><b>addnode 2uyfzdmv4aqyzzoz.onion add</b></p>
+                            <p>All we did was replace the = with a space, and append the word <b>add</b> after the address. Now you’re ready to add this to your SpectreCoin wallet! To do this, follow the steps in the image below.</p>
+                            <img src="images/walletnavigation.jpeg">
+                            <h5>Entering a node address manually.</h5>
+                            <p>Once you have successfully added 5–6 new node addresses, your wallet should connect and begin syncing to the SpectreCoin network. After your wallet is fully synced, proceed to Step 3.</p>
+                            <h4>Step 3: Send Your SpectreCoins to Your New Wallet</h4>
+                            <p>Now you will send your SpectreCoins to your new wallet. Navigate to the <b>Receive screen</b> to view your wallet addresses. By default, you will have two addresses: one normal address and one stealth address. For now, we are going to use the normal, <b>Default Address</b>.</p>
+                            <p>Note: <i><b>Never</b> send your coins from an exchange to a stealth address. This may be supported in the future, but for now always use a normal address.</i></p>
+                            <p>Send your SpectreCoins from the exchange to your Default Address. Once they appear in your wallet, proceed to Step 4.</p>
+                            <img src="images/walletnavigation2.jpeg">
+                            <h4>Step 4: Encrypt Your Wallet</h4>
+                            <p>This step isn’t necessary to stake coins, however, you should do this to add a layer of protection to your investment.</p>
+                            <p>Navigate to the Encrypt Wallet feature and type in a passphrase. Remember to store your passphrase in a safe place.</p>
+                            <img src="images/walletnavigation3.jpeg">
+                            <h4>Step 5: Backup Your Wallet File</h4>
+                            <p>Again, not necessary to stake coins, but absolutely critical to ensure that you do not lose your coins. Make sure you save the backup file on multiple devices such as PC, USB, external drive, etc.</p>
+                            <img src="images/walletnavigation4.jpeg">
+                            <h4>Step 6: Unlock Your Wallet and Begin Staking!</h4>
+                            <p>You’re now ready to begin staking! Now that we have everything set up, the last step is to unlock your wallet for staking only. The quickest way to do this is to click on the lock icon in the upper-right corner. This will prompt you to enter your passphrase. Once you have confirmed your passphrase, the lock will turn orange. If you hover your mouse over the lock icon, you will see a popup that informs you that your wallet is encrypted and unlocked for staking only.</p>
+                            <p>Now, if you hover over the Spectre icon that is to the right of the lock, you will see a popup to let you know that you are staking your coins, along with other information such as estimated time to earn reward.</p>
+                            <p>Note: <i>If you see a message that says “you are not staking because you do not have mature coins,” do not worry. This message will go away in roughly 1 to 2 hours, at which point your wallet will begin staking your SpectreCoins.</i></p>
+                            <img src="images/walletnavigation5.jpeg">
+                            <p>That’s it! You should be all set.</p>
+                        </div>
+                    </div>
+                </div>     
+            </div>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <script type="text/javascript" src="js/content-scaling.js"></script>
+    </body>
+</html>

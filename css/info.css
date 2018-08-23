@@ -1,0 +1,57 @@
+#info h2 {
+    text-decoration: underline #bfbfbf;
+    margin-right: 20px;
+    margin-top: 20px;
+    color: #43A8FC;
+    float: right;
+}
+
+#info .title {
+    padding: 0px 0px 20px;
+}
+
+#info .square {
+    height: 75px;
+    width: 75px;
+    border: 1px solid #bfbfbf;
+    padding: 3px;
+}
+
+#info .square img {
+    width: 100%;
+    background-color: #bfbfbf;
+    padding: 7px 10px;
+}
+
+#info .card1 {
+    background-color: #f2f2f2;
+    padding: 10px 0px 0px 10px;
+}
+
+#info .table td, #nfo .table th {
+    border: none;
+}
+
+#info table p {
+    font-family: 'Squares', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+    margin-bottom: 0px;
+}
+
+@media(max-width: 667px) {
+    #info.container {
+        margin-top: 60px;
+        margin-bottom: 40px;
+    }
+}
+
+@media(max-width: 420px) {
+    #info h2 {
+        margin-top: 22px;
+        font-size: 18px;
+    }
+    #info.container {
+        margin-top: 80px;
+    }
+}

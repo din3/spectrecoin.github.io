@@ -1,0 +1,96 @@
+#projects.container {
+    padding-bottom: 30px;
+}
+
+#projects h2 {
+    text-decoration: underline #a6a6a6;;
+    margin-left: 20px;
+    margin-top: 15px;
+    color: #43A8FC;
+}
+
+#projects h4 {
+    margin-top: 8px;
+    margin-left: 12px;
+}
+
+#projects .title {
+    padding: 0px 0px 20px;
+}
+
+#projects .square {
+    height: 75px;
+    width: 75px;
+    border: 1px solid #bfbfbf;
+    padding: 3px;
+}
+
+#projects .square img {
+    width: 100%;
+}
+
+#projects .main-card {
+    border: 1px solid #a6a6a6;
+    margin-top: 45px;
+    margin-left: 15px;
+    padding: 25px 60px 10px 20px;
+    position: relative;
+}
+
+#projects .main-card img {
+    width: 25px;
+}
+
+#projects .title-card {
+    background-color: #bfbfbf;
+    position: absolute;
+    top: -18px;
+    left: -15px;
+    padding-left: 10px;
+}
+
+#projects .title1 {
+    padding-right: 20px;
+}
+
+#projects .title2 {
+    padding-right: 41px;
+}
+
+#projects .title3 {
+    padding-right: 90px;
+}
+
+@media(max-width: 768px) {
+    #projects.container {
+        margin-top: 150px;
+    }
+}
+
+@media(max-width: 667px) {
+    #projects.container {
+        margin-top: 60px;
+        margin-bottom: 50px;
+    }
+}
+
+@media(max-width: 420px) {
+    #projects.container {
+        margin-top: 80px;
+    }
+    #projects h2 {
+        margin-top: 10px;
+        font-size: 18px;
+    }
+    #projects .main-card {
+        padding: 25px 20px 10px 20px;
+    }
+    #projects .title-card {
+        top: -10%;
+        left: 0px;
+        width: 100%;
+    }
+    #projects p {
+        margin-top: 30px;
+    }
+}
