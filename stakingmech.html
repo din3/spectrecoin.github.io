@@ -26,9 +26,9 @@
         <link rel="stylesheet" href="css/guide.css">
         <title>SpectreCoin</title>
     </head>
-    <body>   
+    <body>
         <nav id="page-nav" class="navbar navbar-expand-sm fixed-top">
-            <img src="images/spectre.png" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="images/icons/xspec_icon_128px.png" class="navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
                 <ul class="nav">
                     <li class="nav-item wrap">
@@ -44,7 +44,7 @@
                         <a class="nav-link" href="index.html#trade">TRADE</a>
                     </li>
                     <li class="nav-item wrap d-none d-md-block">
-                        <a class="nav-link logo" href="/"><img src="images/spectre.png" class="logo"></a>
+                        <a class="nav-link logo" href="/"><img src="images/icons/xspec_icon_128px.png" class="logo"></a>
                     </li>
                     <li class="nav-item wrap">
                         <a class="nav-link" href="index.html#donations">DONATIONS</a>
@@ -56,7 +56,7 @@
                         <a class="nav-link" href="index.html#community">COMMUNITY</a>
                     </li>
                 </ul>
-            </div>        
+            </div>
         </nav>
         <div id="page-wrap">
             <div class="content-buffer"></div>
@@ -71,7 +71,7 @@
                             <p>PoSv1 - This version is implemented in Peercoin. It relied heavily on the notion of "coin age", or how long a UTXO has not been spent on the blockchain. It's implementation would basically make it so that the higher the coin age, the more the difficulty is reduced. This had the bad side-effect however of encouraging people to only open their wallet every month or longer for staking. Assuming the coins were all relatively old, they would almost instantaneously produce new staking blocks. This however makes double-spend attacks extremely easy to execute. Peercoin itself is not affected by this because it is a hybrid PoW and PoS blockchain, so the PoW blocks mitigated this effect.</p>
                             <p>PoSv2 - This version removes coin age completely from consensus, as well as using a completely different stake modifier mechanism from v1. The number of changes are too numerous to list here. All of this was done to remove coin age from consensus and make it a safe consensus mechanism without requiring a PoW/PoS hybrid blockchain to mitigate various attacks.</p>
                             <p><b>PoSv3</b> - PoSv3 is really more of an incremental improvement over PoSv2. In PoSv2 the stake modifier also included the previous block time. This was removed to prevent a "short-range" attack where it was possible to iteratively mine an alternative blockchain by iterating through previous block times. PoSv2 used block and transaction times to determine the age of a UTXO; this is not the same as coin age, but rather is the "minimum confirmations required" before a UTXO can be used for staking. This was changed to a much simpler mechanism where the age of a UTXO is determined by it's depth in the blockchain. This thus doesn't incentivize inaccurate timestamps to be used on the blockchain, and is also more immune to "timewarp" attacks. PoSv3 also added support for OP_RETURN coinstake transactions which allows for a vout to contain the public key for signing the block without requiring a full pay-to-pubkey script.</p>
-                            <img class="img-fluid" src="images/stakingmech.png">  
+                            <img class="img-fluid" src="images/stakingmech.png">
                             <p>Basically, ‘staking’ algorithm awards nodes (wallets with synchronized blockchain that are online for keeping the peer-to-peer network operational.</p>
                             <p>A node/online wallet (and user in the end) receives <b>5%</b> annually on the amounts of coins it has in the wallet being online at all times (or 24/7).</p>
                             <p><b>5%</b> is the rate you receive if all the Coin Supply of the network(around ~21 mil currently) are being on the synchronized wallets and online (or ‘staking’).</p>
@@ -79,7 +79,7 @@
                             <p>As in practice the amount of wallets ‘staking’ online is much lesser in the moment (e.g 7 mil instead of 21 mil Coin Supply), 5% rewards of the whole Coin Supply (around 1 mil of XSPEC) would be distributed between fewer amount of people.<br/>And as in our example given, XSPEC owners that hold 30% of coins being staked will receive benefits as if 100% of coin supply would have been ‘staked’, effectively increasing their bonus rewards rate from staking from <b>5%</b> to <b>15%</b></p>
                         </div>
                     </div>
-                </div>     
+                </div>
             </div>
         </div>
 
